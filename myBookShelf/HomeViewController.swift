@@ -15,21 +15,11 @@ import UIKit
 
 // final:RootVCクラスを継承したクラスを作ることを禁止します
 class HomeViewController: UIViewController {
-
-//    private var current: UIViewController
-//    
-//    init() {
-//        current = SplashVC()
-//        super.init(nibName:nil, bundle: nil)
-//    }
-//    
-//    required init(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationItem.title = "myBookShelf"
+        
         let rect = CGRect(x: 0, y: 0, width: 200, height: 200)
         let label = UILabel(frame: rect)
         label.center = self.view.center
@@ -41,5 +31,4 @@ class HomeViewController: UIViewController {
         
     }
     
-
 }

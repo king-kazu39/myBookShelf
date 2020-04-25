@@ -13,10 +13,9 @@ Twitterのような動くスプラッシュ画面をふろぐんで作ってみ�
 http://developers.goalist.co.jp/entry/2017/07/20/170748
 */
 
-class ViewController: UIViewController {
+class SplashViewController: UIViewController {
 
     var imageView: UIImageView!
-    private var nextVC: UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,14 +56,16 @@ class ViewController: UIViewController {
             // アニメーションが終わったらimageViewを消す
             self.imageView.removeFromSuperview()
             self.removeFromParent()
-            let nextVC = HomeViewController()
+            let nextVC = UINavigationController(rootViewController: HomeViewController())
+            /*
+             サブクラスに遷移する方法
+             https://qiita.com/sussan0416/items/8609fd2a06a67fd22cf0
+             */
             self.addChild(nextVC)
             self.view.addSubview(nextVC.view!)
             nextVC.didMove(toParent: self)
         })
     }
     
-
-
 }
 
