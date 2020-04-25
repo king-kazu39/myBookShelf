@@ -1,0 +1,16 @@
+/* 
+  Localizable.strings
+  myBookShelf
+
+  Created by 仲里和也 on 2020/04/26.
+  Copyright © 2020 仲里和也. All rights reserved.
+*/
+
+"" = "アラート表示";
+"" = "保存しますか？";
+"" = "写真を選択";
+"" = "カメラ起動";
+"" = "キャンセル";
+"" = "";
+"" = "";
+"" = "";

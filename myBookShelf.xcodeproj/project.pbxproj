@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5112A4324549FD900F578A5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5112A4224549FD900F578A5 /* RegisterView.swift */; };
 		E54228B1245318990018492E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B0245318990018492E /* AppDelegate.swift */; };
 		E54228B3245318990018492E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B2245318990018492E /* SceneDelegate.swift */; };
 		E54228B5245318990018492E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B4245318990018492E /* SplashViewController.swift */; };
 		E54228BA2453189E0018492E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54228B92453189E0018492E /* Assets.xcassets */; };
-		E54228C52453370D0018492E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C42453370D0018492E /* HomeViewController.swift */; };
+		E54228C52453370D0018492E /* MyBookSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C42453370D0018492E /* MyBookSearchViewController.swift */; };
 		E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C624542C710018492E /* MainTabBarViewController.swift */; };
-		E54228C924542DC50018492E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C824542DC50018492E /* RegisterViewController.swift */; };
+		E54228C924542DC50018492E /* WishListSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C824542DC50018492E /* WishListSearchViewController.swift */; };
 		E54228D524544D350018492E /* MyBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228D424544D350018492E /* MyBook.swift */; };
 		E54228D6245459E60018492E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54228CC24544C840018492E /* Realm.framework */; };
 		E54228D7245459E60018492E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E54228CC24544C840018492E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E54228D9245459F60018492E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54228D024544C980018492E /* RealmSwift.framework */; };
 		E54228DA245459F60018492E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E54228D024544C980018492E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E54228DD2454997E0018492E /* MyBookRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228DC2454997E0018492E /* MyBookRegisterViewController.swift */; };
+		E54CB2332455CA5200A392F8 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54CB2322455CA5200A392F8 /* AlertUtil.swift */; };
+		E54CB2352455D56500A392F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E54CB2342455D56500A392F8 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,18 +41,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E5112A4224549FD900F578A5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		E54228AD245318990018492E /* myBookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54228B0245318990018492E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E54228B2245318990018492E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E54228B4245318990018492E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E54228B92453189E0018492E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E54228BE2453189E0018492E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E54228C42453370D0018492E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E54228C42453370D0018492E /* MyBookSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookSearchViewController.swift; sourceTree = "<group>"; };
 		E54228C624542C710018492E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
-		E54228C824542DC50018492E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E54228C824542DC50018492E /* WishListSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListSearchViewController.swift; sourceTree = "<group>"; };
 		E54228CC24544C840018492E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E54228D024544C980018492E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		E54228D424544D350018492E /* MyBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBook.swift; sourceTree = "<group>"; };
+		E54228DC2454997E0018492E /* MyBookRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRegisterViewController.swift; sourceTree = "<group>"; };
+		E54CB2322455CA5200A392F8 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
+		E54CB2342455D56500A392F8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5112A4124549FAF00F578A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5112A4224549FD900F578A5 /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E54228A4245318990018492E = {
 			isa = PBXGroup;
 			children = (
@@ -84,15 +100,16 @@
 		E54228AF245318990018492E /* myBookShelf */ = {
 			isa = PBXGroup;
 			children = (
+				E54CB2312455CA3600A392F8 /* Util */,
 				E54228B0245318990018492E /* AppDelegate.swift */,
 				E54228B2245318990018492E /* SceneDelegate.swift */,
-				E54228B4245318990018492E /* SplashViewController.swift */,
-				E54228D324544D0E0018492E /* Realm */,
-				E54228C42453370D0018492E /* HomeViewController.swift */,
-				E54228C824542DC50018492E /* RegisterViewController.swift */,
 				E54228C624542C710018492E /* MainTabBarViewController.swift */,
+				E5112A4124549FAF00F578A5 /* View */,
+				E54228DB2454950A0018492E /* VC */,
+				E54228D324544D0E0018492E /* Realm */,
 				E54228B92453189E0018492E /* Assets.xcassets */,
 				E54228BE2453189E0018492E /* Info.plist */,
+				E54CB2342455D56500A392F8 /* Localizable.strings */,
 			);
 			path = myBookShelf;
 			sourceTree = "<group>";
@@ -112,6 +129,25 @@
 				E54228D424544D350018492E /* MyBook.swift */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		E54228DB2454950A0018492E /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				E54228B4245318990018492E /* SplashViewController.swift */,
+				E54228C42453370D0018492E /* MyBookSearchViewController.swift */,
+				E54228DC2454997E0018492E /* MyBookRegisterViewController.swift */,
+				E54228C824542DC50018492E /* WishListSearchViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		E54CB2312455CA3600A392F8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E54CB2322455CA5200A392F8 /* AlertUtil.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +194,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = E54228A4245318990018492E;
 			productRefGroup = E54228AE245318990018492E /* Products */;
@@ -175,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54228BA2453189E0018492E /* Assets.xcassets in Resources */,
+				E54CB2352455D56500A392F8 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,13 +245,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5112A4324549FD900F578A5 /* RegisterView.swift in Sources */,
 				E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */,
 				E54228B5245318990018492E /* SplashViewController.swift in Sources */,
+				E54228DD2454997E0018492E /* MyBookRegisterViewController.swift in Sources */,
 				E54228B1245318990018492E /* AppDelegate.swift in Sources */,
 				E54228D524544D350018492E /* MyBook.swift in Sources */,
-				E54228C924542DC50018492E /* RegisterViewController.swift in Sources */,
+				E54228C924542DC50018492E /* WishListSearchViewController.swift in Sources */,
 				E54228B3245318990018492E /* SceneDelegate.swift in Sources */,
-				E54228C52453370D0018492E /* HomeViewController.swift in Sources */,
+				E54CB2332455CA5200A392F8 /* AlertUtil.swift in Sources */,
+				E54228C52453370D0018492E /* MyBookSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

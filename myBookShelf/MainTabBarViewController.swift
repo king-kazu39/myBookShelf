@@ -14,10 +14,10 @@ class MainTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firstVC = UINavigationController(rootViewController: HomeViewController())
+        let firstVC = UINavigationController(rootViewController: MyBookSearchViewController())
         firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 1)
         
-        let secondVC = UINavigationController(rootViewController: RegisterViewController())
+        let secondVC = UINavigationController(rootViewController: WishListSearchViewController())
         secondVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
         
         self.viewControllers = [firstVC, secondVC]
