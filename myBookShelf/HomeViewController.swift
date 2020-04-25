@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 /*
  [Swift 5]RootViewControllerを適用する備忘録
@@ -28,6 +29,23 @@ class HomeViewController: UIViewController {
         label.font = UIFont(name: "HiraKakuProN-W6", size: 17)
         view.backgroundColor = .white
         self.view.addSubview(label)
+        
+        let myBook = MyBook()
+        myBook.title = "Realm入門"
+        myBook.category = "技術参考書"
+        myBook.bought_at = 20191212
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(myBook)
+        }
+        
+        let books = realm.objects(MyBook.self)
+        for book in books {
+            print("title: \(book.title)")
+            print("category: \(book.category)")
+            print("bought_at: \(book.bought_at)")
+        }
         
     }
     
