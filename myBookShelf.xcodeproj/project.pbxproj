@@ -11,8 +11,9 @@
 		E54228B3245318990018492E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B2245318990018492E /* SceneDelegate.swift */; };
 		E54228B5245318990018492E /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B4245318990018492E /* SplashViewController.swift */; };
 		E54228BA2453189E0018492E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E54228B92453189E0018492E /* Assets.xcassets */; };
-		E54228BD2453189E0018492E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E54228BB2453189E0018492E /* LaunchScreen.storyboard */; };
 		E54228C52453370D0018492E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C42453370D0018492E /* HomeViewController.swift */; };
+		E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C624542C710018492E /* MainTabBarViewController.swift */; };
+		E54228C924542DC50018492E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C824542DC50018492E /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,9 +22,10 @@
 		E54228B2245318990018492E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E54228B4245318990018492E /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E54228B92453189E0018492E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E54228BC2453189E0018492E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E54228BE2453189E0018492E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E54228C42453370D0018492E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E54228C624542C710018492E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		E54228C824542DC50018492E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,9 @@
 				E54228B2245318990018492E /* SceneDelegate.swift */,
 				E54228B4245318990018492E /* SplashViewController.swift */,
 				E54228C42453370D0018492E /* HomeViewController.swift */,
+				E54228C824542DC50018492E /* RegisterViewController.swift */,
+				E54228C624542C710018492E /* MainTabBarViewController.swift */,
 				E54228B92453189E0018492E /* Assets.xcassets */,
-				E54228BB2453189E0018492E /* LaunchScreen.storyboard */,
 				E54228BE2453189E0018492E /* Info.plist */,
 			);
 			path = myBookShelf;
@@ -125,7 +128,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E54228BD2453189E0018492E /* LaunchScreen.storyboard in Resources */,
 				E54228BA2453189E0018492E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,25 +139,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */,
 				E54228B5245318990018492E /* SplashViewController.swift in Sources */,
 				E54228B1245318990018492E /* AppDelegate.swift in Sources */,
+				E54228C924542DC50018492E /* RegisterViewController.swift in Sources */,
 				E54228B3245318990018492E /* SceneDelegate.swift in Sources */,
 				E54228C52453370D0018492E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E54228BB2453189E0018492E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E54228BC2453189E0018492E /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E54228BF2453189E0018492E /* Debug */ = {

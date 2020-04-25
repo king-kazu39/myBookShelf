@@ -56,7 +56,7 @@ class SplashViewController: UIViewController {
             // アニメーションが終わったらimageViewを消す
             self.imageView.removeFromSuperview()
             self.removeFromParent()
-            let nextVC = UINavigationController(rootViewController: HomeViewController())
+            let nextVC = MainTabBarViewController()
             /*
              サブクラスに遷移する方法
              https://qiita.com/sussan0416/items/8609fd2a06a67fd22cf0
