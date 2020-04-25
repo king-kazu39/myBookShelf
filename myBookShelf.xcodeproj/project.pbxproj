@@ -14,7 +14,27 @@
 		E54228C52453370D0018492E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C42453370D0018492E /* HomeViewController.swift */; };
 		E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C624542C710018492E /* MainTabBarViewController.swift */; };
 		E54228C924542DC50018492E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228C824542DC50018492E /* RegisterViewController.swift */; };
+		E54228D524544D350018492E /* MyBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228D424544D350018492E /* MyBook.swift */; };
+		E54228D6245459E60018492E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54228CC24544C840018492E /* Realm.framework */; };
+		E54228D7245459E60018492E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E54228CC24544C840018492E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E54228D9245459F60018492E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E54228D024544C980018492E /* RealmSwift.framework */; };
+		E54228DA245459F60018492E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E54228D024544C980018492E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E54228D8245459E60018492E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E54228DA245459F60018492E /* RealmSwift.framework in Embed Frameworks */,
+				E54228D7245459E60018492E /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E54228AD245318990018492E /* myBookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +46,9 @@
 		E54228C42453370D0018492E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E54228C624542C710018492E /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		E54228C824542DC50018492E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E54228CC24544C840018492E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		E54228D024544C980018492E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		E54228D424544D350018492E /* MyBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E54228D9245459F60018492E /* RealmSwift.framework in Frameworks */,
+				E54228D6245459E60018492E /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +69,7 @@
 			children = (
 				E54228AF245318990018492E /* myBookShelf */,
 				E54228AE245318990018492E /* Products */,
+				E54228CB24544C840018492E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +87,7 @@
 				E54228B0245318990018492E /* AppDelegate.swift */,
 				E54228B2245318990018492E /* SceneDelegate.swift */,
 				E54228B4245318990018492E /* SplashViewController.swift */,
+				E54228D324544D0E0018492E /* Realm */,
 				E54228C42453370D0018492E /* HomeViewController.swift */,
 				E54228C824542DC50018492E /* RegisterViewController.swift */,
 				E54228C624542C710018492E /* MainTabBarViewController.swift */,
@@ -68,6 +95,23 @@
 				E54228BE2453189E0018492E /* Info.plist */,
 			);
 			path = myBookShelf;
+			sourceTree = "<group>";
+		};
+		E54228CB24544C840018492E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E54228D024544C980018492E /* RealmSwift.framework */,
+				E54228CC24544C840018492E /* Realm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E54228D324544D0E0018492E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				E54228D424544D350018492E /* MyBook.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +124,8 @@
 				E54228A9245318990018492E /* Sources */,
 				E54228AA245318990018492E /* Frameworks */,
 				E54228AB245318990018492E /* Resources */,
+				E54228CA24544BF40018492E /* ShellScript */,
+				E54228D8245459E60018492E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +180,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E54228CA24544BF40018492E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E54228A9245318990018492E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -142,6 +210,7 @@
 				E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */,
 				E54228B5245318990018492E /* SplashViewController.swift in Sources */,
 				E54228B1245318990018492E /* AppDelegate.swift in Sources */,
+				E54228D524544D350018492E /* MyBook.swift in Sources */,
 				E54228C924542DC50018492E /* RegisterViewController.swift in Sources */,
 				E54228B3245318990018492E /* SceneDelegate.swift in Sources */,
 				E54228C52453370D0018492E /* HomeViewController.swift in Sources */,
@@ -271,6 +340,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZJH93GWP3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = myBookShelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -289,6 +362,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZJH93GWP3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = myBookShelf/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
