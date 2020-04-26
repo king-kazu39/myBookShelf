@@ -15,16 +15,20 @@ import RealmSwift
  */
 
 // final:RootVCクラスを継承したクラスを作ることを禁止します
-class HomeViewController: UIViewController {
+class MyBookSearchViewController: UIViewController {
+    
+    var rightBtn: UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "myBookShelf"
+        rightBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onClick))
+        self.navigationItem.rightBarButtonItem = rightBtn
         
         let rect = CGRect(x: 0, y: 0, width: 200, height: 200)
         let label = UILabel(frame: rect)
         label.center = self.view.center
-        label.text = "FirstViewController"
+        label.text = "MyBookSearchViewController"
         label.textColor = UIColor.black
         label.font = UIFont(name: "HiraKakuProN-W6", size: 17)
         view.backgroundColor = .white
@@ -47,6 +51,11 @@ class HomeViewController: UIViewController {
             print("bought_at: \(book.bought_at)")
         }
         
+    }
+    
+    @objc func onClick(){
+        let nextVC = MyBookRegisterViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
 }
