@@ -10,16 +10,18 @@ import UIKit
 
 protocol RegisterProtocol: class {
     func didTapAlertAction(button: UIButton)
+    func didTapRegister(button: UIButton)
 }
 
 class RegisterView: UIView {
 
     var imageBtn: UIButton?
-    let image0 = UIImage(named: "camera-icon")
+    var image0:UIImage? = UIImage(named: "camera-icon")
     
     var bookTitleTextField: UITextField?
     var categoryTextField: UITextField?
-    var boughtAtTextField: UITextField?
+    var boughtAtTextField: DatePickerKeyboard?
+//    var datePicker: DatePickerKeyboard?
     var sendBtn: UIButton?
     
     weak var delegate: RegisterProtocol? = nil
@@ -51,29 +53,32 @@ class RegisterView: UIView {
         
     }
     
-    private func setBookTitleTextField(){
+    func setBookTitleTextField(){
         bookTitleTextField = UITextField()
         bookTitleTextField?.borderStyle = .roundedRect
         bookTitleTextField?.layer.cornerRadius = 5
         bookTitleTextField?.clipsToBounds = true
+        bookTitleTextField?.tag = 1
         bookTitleTextField?.placeholder = "タイトルを入力してください"
         self.addSubview(bookTitleTextField!)
     }
     
-    private func setCategoryTextField() {
+    func setCategoryTextField() {
         categoryTextField = UITextField()
         categoryTextField?.borderStyle = .roundedRect
         categoryTextField?.layer.cornerRadius = 5
         categoryTextField?.clipsToBounds = true
+        categoryTextField?.tag = 2
         categoryTextField?.placeholder = "カテゴリを選択してください"
         self.addSubview(categoryTextField!)
     }
     
-    private func setBoughtAtTextField() {
-        boughtAtTextField = UITextField()
+    func setBoughtAtTextField() {
+        boughtAtTextField = DatePickerKeyboard()
         boughtAtTextField?.borderStyle = .roundedRect
         boughtAtTextField?.layer.cornerRadius = 5
         boughtAtTextField?.clipsToBounds = true
+        boughtAtTextField?.tag = 3
         boughtAtTextField?.placeholder = "購入日を選択してください"
         self.addSubview(boughtAtTextField!)
     }
@@ -90,6 +95,7 @@ class RegisterView: UIView {
     }
     
     @objc func tapRegisterBtn(_ sender: UIButton) {
+        self.delegate?.didTapRegister(button: sender)
         print("登録するよ〜")
     }
     
