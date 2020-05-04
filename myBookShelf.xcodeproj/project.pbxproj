@@ -23,6 +23,7 @@
 		E54228DD2454997E0018492E /* MyBookRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228DC2454997E0018492E /* MyBookRegisterViewController.swift */; };
 		E54CB2332455CA5200A392F8 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54CB2322455CA5200A392F8 /* AlertUtil.swift */; };
 		E54CB2352455D56500A392F8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E54CB2342455D56500A392F8 /* Localizable.strings */; };
+		E5AB945C24600C460020867C /* MyBookCRUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5AB945B24600C460020867C /* MyBookCRUD.swift */; };
 		E5DC5727245ECDB5003EDFA7 /* TextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5726245ECDB5003EDFA7 /* TextFieldViewController.swift */; };
 		E5DC572A245F318C003EDFA7 /* DatePickerKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DC5729245F318C003EDFA7 /* DatePickerKeyboard.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		E54228DC2454997E0018492E /* MyBookRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookRegisterViewController.swift; sourceTree = "<group>"; };
 		E54CB2322455CA5200A392F8 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
 		E54CB2342455D56500A392F8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E5AB945B24600C460020867C /* MyBookCRUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookCRUD.swift; sourceTree = "<group>"; };
 		E5DC5726245ECDB5003EDFA7 /* TextFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewController.swift; sourceTree = "<group>"; };
 		E5DC5729245F318C003EDFA7 /* DatePickerKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E54228D424544D350018492E /* MyBook.swift */,
+				E5AB945B24600C460020867C /* MyBookCRUD.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				E5DC572A245F318C003EDFA7 /* DatePickerKeyboard.swift in Sources */,
 				E54228B3245318990018492E /* SceneDelegate.swift in Sources */,
 				E54CB2332455CA5200A392F8 /* AlertUtil.swift in Sources */,
+				E5AB945C24600C460020867C /* MyBookCRUD.swift in Sources */,
 				E54228C52453370D0018492E /* MyBookSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,5 +13,5 @@ class MyBook: Object {
     @objc dynamic var title = ""
     @objc dynamic var image = ""
     @objc dynamic var category = ""
-    @objc dynamic var bought_at = 0
+    @objc dynamic var bought_at = ""
 }

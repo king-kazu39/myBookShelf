@@ -12,6 +12,7 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
     
     var picker: UIImagePickerController = UIImagePickerController()
     var registerView: RegisterView?
+    private var imgStr: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,7 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             registerView?.imageBtn?.setImage(image, for: .normal)
+            imgStr = image.pngData()?.base64EncodedString()
         } else {
             print("error")
         }
@@ -63,6 +65,10 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
     
     func didTapRegister(button: UIButton) {
         showAlert {
+            MyBookCRUD.myBookWrite(image: self.imgStr ?? "",
+                                   title: (self.registerView?.bookTitleTextField?.text)!,
+                                   category: self.registerView?.categoryTextField?.text ?? "",
+                                   boughtAt: self.registerView?.boughtAtTextField?.text ?? "")
             print("登録します")
         }
     }
