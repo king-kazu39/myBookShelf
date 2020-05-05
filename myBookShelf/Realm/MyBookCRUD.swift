@@ -11,11 +11,11 @@ import RealmSwift
 
 class MyBookCRUD {
     
-    static func myBookWrite(image: String?, title: String, category: String?, boughtAt: String?){
+    static func myBookCreate(image: NSData, title: String, category: String?, boughtAt: String?){
         let realm = try! Realm()
         let myBook = MyBook()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        myBook.image = image ?? ""
+        myBook.image = image
         myBook.title = title
         myBook.category = category ?? ""
         myBook.bought_at = boughtAt ?? ""
@@ -23,5 +23,10 @@ class MyBookCRUD {
         try! realm.write() {
             realm.add(myBook)
         }
+    }
+    
+    static func myBookAllSelectDB() -> Results<MyBook> {
+        let realm = try! Realm()
+        return realm.objects(MyBook.self)
     }
 }

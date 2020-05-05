@@ -11,7 +11,7 @@ import RealmSwift
 
 class MyBook: Object {
     @objc dynamic var title = ""
-    @objc dynamic var image = ""
+    @objc dynamic var image:NSData? = nil
     @objc dynamic var category = ""
     @objc dynamic var bought_at = ""
 }

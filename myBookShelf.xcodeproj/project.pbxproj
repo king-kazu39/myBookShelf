@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E511204E246198C000A89160 /* MyBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E511204D246198C000A89160 /* MyBookTableViewCell.swift */; };
 		E5112A4324549FD900F578A5 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5112A4224549FD900F578A5 /* RegisterView.swift */; };
 		E54228B1245318990018492E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B0245318990018492E /* AppDelegate.swift */; };
 		E54228B3245318990018492E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54228B2245318990018492E /* SceneDelegate.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E511204D246198C000A89160 /* MyBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookTableViewCell.swift; sourceTree = "<group>"; };
 		E5112A4224549FD900F578A5 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		E54228AD245318990018492E /* myBookShelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myBookShelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E54228B0245318990018492E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				E5112A4224549FD900F578A5 /* RegisterView.swift */,
+				E511204D246198C000A89160 /* MyBookTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				E54228C724542C710018492E /* MainTabBarViewController.swift in Sources */,
 				E54228B5245318990018492E /* SplashViewController.swift in Sources */,
 				E54228DD2454997E0018492E /* MyBookRegisterViewController.swift in Sources */,
+				E511204E246198C000A89160 /* MyBookTableViewCell.swift in Sources */,
 				E54228B1245318990018492E /* AppDelegate.swift in Sources */,
 				E54228D524544D350018492E /* MyBook.swift in Sources */,
 				E54228C924542DC50018492E /* WishListSearchViewController.swift in Sources */,
