@@ -12,7 +12,7 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
     
     var picker: UIImagePickerController = UIImagePickerController()
     var registerView: RegisterView?
-    private var imgStr: String?
+    private var imgStr: NSData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             registerView?.imageBtn?.setImage(image, for: .normal)
-            imgStr = image.pngData()?.base64EncodedString()
+            imgStr = resizeImgData(originalImg: image, width: 300)
         } else {
             print("error")
         }
@@ -64,12 +64,37 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
     
     
     func didTapRegister(button: UIButton) {
-        showAlert {
-            MyBookCRUD.myBookWrite(image: self.imgStr ?? "",
-                                   title: (self.registerView?.bookTitleTextField?.text)!,
-                                   category: self.registerView?.categoryTextField?.text ?? "",
-                                   boughtAt: self.registerView?.boughtAtTextField?.text ?? "")
+        let title = "アラート表示"
+        let msg = "保存しますか？"
+        showAlert(alertTitle: title, alertMsg: msg) {
+            MyBookCRUD.myBookCreate(image: self.imgStr ??
+                                   (UIImage(named: "book-icon")?.pngData()!)! as NSData,
+                                    title: (self.registerView?.bookTitleTextField?.text)!,
+                                    category: self.registerView?.categoryTextField?.text ?? "",
+                                    boughtAt: self.registerView?.boughtAtTextField?.text ?? "")
+            
+            self.showAlert(alertTitle: "成功", alertMsg: "登録完了しました") {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
             print("登録します")
         }
+    }
+    
+    func resizeImgData(originalImg: UIImage, width: Double) -> NSData {
+        var imageData = originalImg.pngData()
+        
+        if (imageData!.count) > 1000000 {
+            
+            let aspectScale = originalImg.size.height / originalImg.size.width
+            let resizedSize = CGSize(width: width, height: width * Double(aspectScale))
+            UIGraphicsBeginImageContext(resizedSize)
+            originalImg.draw(in: CGRect(x: 0, y: 0, width: resizedSize.width, height: resizedSize.height))
+            let resizedImg = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+            
+            imageData = resizedImg?.pngData()
+        }
+        
+        return (imageData as NSData?)!
     }
 }

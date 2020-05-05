@@ -40,9 +40,9 @@ extension UIViewController {
         present(alert, animated:true, completion: nil)
     }
     
-    func showAlert(action: @escaping () -> Void) {
-        let alert = UIAlertController(title: "アラート表示",
-                                      message: "保存してもよろしいですか？",
+    func showAlert(alertTitle: String, alertMsg: String, action: @escaping () -> Void) {
+        let alert = UIAlertController(title: alertTitle,
+                                      message: alertMsg,
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK",
                                      style: UIAlertAction.Style.default,
