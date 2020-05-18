@@ -1,1 +1,2 @@
-github "realm/realm-cocoa" "v4.4.1"
+github "alberdev/EmptyStateKit" "d54954f3a618ccfec429c04bfa8b671a9969b480"
+github "realm/realm-cocoa" "v5.0.0"
