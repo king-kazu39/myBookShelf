@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import EmptyStateKit
 
 /*
  [Swift 5]RootViewControllerを適用する備忘録
@@ -15,7 +16,7 @@ import RealmSwift
  */
 
 // final:RootVCクラスを継承したクラスを作ることを禁止します
-class MyBookSearchViewController: UIViewController {
+class MyBookSearchViewController: UIViewController, EmptyStateDelegate {
     
     var rightBtn: UIBarButtonItem?
     private var tableView: UITableView?
@@ -24,9 +25,7 @@ class MyBookSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "myBookShelf"
-        rightBtn = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onClick))
-        self.navigationItem.rightBarButtonItem = rightBtn
-        
+        view.emptyState.delegate = self
         tableView = UITableView(frame: view.bounds, style: .insetGrouped)
         tableView?.delegate = self
         tableView?.dataSource = self
@@ -38,7 +37,8 @@ class MyBookSearchViewController: UIViewController {
         
     }
     
-    @objc func onClick(){
+    func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
+        view.emptyState.hide()
         let nextVC = MyBookRegisterViewController()
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -49,21 +49,11 @@ class MyBookSearchViewController: UIViewController {
         
         if myBookData.count == 0 {
             tableView?.isHidden = true
-            setOnlyTextInNoTableView()
+            view.emptyState.show(State.noSearch)
+            view.emptyState.format.buttonWidth = 100
         } else {
             tableView?.isHidden = false
         }
-    }
-    
-    private func setOnlyTextInNoTableView(){
-        let rect = CGRect(x: 0, y: 0, width: 200, height: 200)
-        let label = UILabel(frame: rect)
-        label.center = self.view.center
-        label.text = "MyBookSearchViewController"
-        label.textColor = UIColor.black
-        label.font = UIFont(name: "HiraKakuProN-W6", size: 17)
-        view.backgroundColor = .white
-        self.view.addSubview(label)
     }
     
 }
