@@ -11,7 +11,7 @@ import RealmSwift
 
 class MyBookCRUD {
     
-    static func myBookCreate(image: NSData, title: String, category: String?, boughtAt: String?){
+    static func createMyBook(_ image: NSData, _ title: String, _ category: String?, _ boughtAt: String?){
         let realm = try! Realm()
         let myBook = MyBook()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -25,8 +25,15 @@ class MyBookCRUD {
         }
     }
     
-    static func myBookAllSelectDB() -> Results<MyBook> {
+    static func selectAllOfMyBook() -> Results<MyBook> {
         let realm = try! Realm()
         return realm.objects(MyBook.self)
+    }
+    
+    // 書籍タイトルで絞り込み検索したときの検索結果を返すメソッド
+    static func filterResultsWithBookName(_ bookTitle: String) -> Results<MyBook> {
+        let realm = try! Realm()
+        let predicate = NSPredicate(format: "title CONTAINS %@", bookTitle)
+        return realm.objects(MyBook.self).filter(predicate).sorted(byKeyPath: "bought_at")
     }
 }

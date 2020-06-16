@@ -67,11 +67,10 @@ class MyBookRegisterViewController: TextFieldViewController, RegisterProtocol,UI
         let title = "アラート表示"
         let msg = "保存しますか？"
         showAlert(alertTitle: title, alertMsg: msg) {
-            MyBookCRUD.myBookCreate(image: self.imgStr ??
-                                   (UIImage(named: "book-icon")?.pngData()!)! as NSData,
-                                    title: (self.registerView?.bookTitleTextField?.text)!,
-                                    category: self.registerView?.categoryTextField?.text ?? "",
-                                    boughtAt: self.registerView?.boughtAtTextField?.text ?? "")
+            MyBookCRUD.createMyBook(self.imgStr ?? (UIImage(named: "book-icon")?.pngData()!)! as NSData,
+                                    (self.registerView?.bookTitleTextField?.text)!,
+                                    self.registerView?.categoryTextField?.text ?? "",
+                                    self.registerView?.boughtAtTextField?.text ?? "")
             
             self.showAlert(alertTitle: "成功", alertMsg: "登録完了しました") {
                 self.navigationController?.popToRootViewController(animated: true)
