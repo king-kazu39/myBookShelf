@@ -43,8 +43,8 @@ class MyBookTableViewCell: UITableViewCell {
         let textWidth = CGFloat(contentView.frame.width / 2 - 30)
         bookImg?.frame = CGRect(x: 15,
                                 y: 15,
-                                width: contentView.frame.width / 3,
-                                height: 120)
+                                width: contentView.frame.width / 4,
+                                height: 80)
         
         bookTitle?.frame = CGRect(x: textPointX,
                                   y: 15,
@@ -52,12 +52,12 @@ class MyBookTableViewCell: UITableViewCell {
                                   height: 30)
         
         bookCategory?.frame = CGRect(x: textPointX,
-                                     y: 50,
+                                     y: 40,
                                      width: textWidth,
                                      height: 30)
         
         bookBeBoughtAt?.frame = CGRect(x: textPointX,
-                                       y: 85,
+                                       y: 70,
                                        width: textWidth,
                                        height: 30)
     }
@@ -65,7 +65,7 @@ class MyBookTableViewCell: UITableViewCell {
     func setBookTitle(){
         bookTitle = UILabel(frame: .zero)
         bookTitle?.textColor = .black
-        bookTitle?.font = UIFont.boldSystemFont(ofSize: 17)
+        bookTitle?.font = UIFont.boldSystemFont(ofSize: 20)
         bookTitle?.sizeToFit()
         bookTitle?.tag = 1
         contentView.addSubview(bookTitle!)
