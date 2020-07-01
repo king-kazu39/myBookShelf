@@ -19,17 +19,17 @@ import EmptyStateKit
 class MyBookSearchViewController: UIViewController, EmptyStateDelegate, UISearchBarDelegate {
     
     private var addBarButtonItem: UIBarButtonItem?
-    private var mySearchBar: UISearchBar!
+    private var mySearchBar: UISearchBar = UISearchBar()
     private var myLabel: UILabel!
     private var tableView: UITableView?
     private var myBookData: Results<MyBook>?
+    private var mySegment: UISegmentedControl = UISegmentedControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "myBookShelf"
         
         //サーチバー作成
-        mySearchBar = UISearchBar()
         mySearchBar.delegate = self
         mySearchBar.showsCancelButton = true
         mySearchBar.placeholder = "本のタイトルを入力"
@@ -47,6 +47,16 @@ class MyBookSearchViewController: UIViewController, EmptyStateDelegate, UISearch
         self.view.addSubview(myLabel)
         self.view.addSubview(tableView!)
         
+        // SegmentedControl
+        mySegment = UISegmentedControl(items: ["リスト表示","一覧表示"])
+        mySegment.tintColor = UIColor(red: 0.13, green: 0.61, blue: 0.93, alpha: 1.0)
+        mySegment.backgroundColor = UIColor(red: 0.96, green: 0.98, blue: 1.00, alpha: 1.0)
+        mySegment.setTitleTextAttributes([NSAttributedString.Key.font:UIFont(name: "HiraKakuProN-W6", size: 14.0)!,NSAttributedString.Key.foregroundColor:UIColor.blue], for: .selected)
+        mySegment.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "HiraKakuPro-W3", size: 14.0)!,NSAttributedString.Key.foregroundColor: UIColor(red: 0.30, green: 0.49, blue: 0.62, alpha: 1.0)], for: .normal)
+        mySegment.selectedSegmentIndex = 0
+        mySegment.addTarget(self, action: #selector(segmentedChange(_:)), for: .valueChanged)
+        self.view.addSubview(mySegment)
+        
         print(myBookData?.count)
         
     }
@@ -54,15 +64,24 @@ class MyBookSearchViewController: UIViewController, EmptyStateDelegate, UISearch
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         print(self.view.safeAreaInsets.top)
+        
         mySearchBar.frame = CGRect(x: 0,
                                    y: self.view.safeAreaInsets.top,
                                    width: view.bounds.width,
                                    height: 50)
         
+        mySegment.frame = CGRect(x: 30,
+                                  y: self.view.safeAreaInsets.top + mySearchBar.bounds.height + 10,
+                                  width: view.bounds.width - 30 * 2,
+                                  height: 40)
+        
         tableView?.frame = CGRect(x: 0,
-                                  y: self.view.safeAreaInsets.top + mySearchBar.bounds.height,
+                                  y: self.view.safeAreaInsets.top
+                                   + mySearchBar.bounds.height
+                                   + mySegment.bounds.height
+                                   + 20,
                                   width: view.bounds.width,
-                                  height: view.bounds.height - (self.view.safeAreaInsets.top + mySearchBar.bounds.height))
+                                  height: view.bounds.height - (self.view.safeAreaInsets.top + mySearchBar.bounds.height + mySegment.bounds.height + 20))
         
         myLabel.frame = CGRect(x: 30,
                                y: 150,
@@ -111,6 +130,17 @@ class MyBookSearchViewController: UIViewController, EmptyStateDelegate, UISearch
             addBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped(_:)))
             self.navigationItem.rightBarButtonItem = addBarButtonItem
             tableView?.isHidden = false
+        }
+    }
+    
+    @objc func segmentedChange(_ segment: UISegmentedControl){
+        switch segment.selectedSegmentIndex {
+        case 0:
+            print("リスト表示")
+        case 1:
+            print("一覧表示")
+        default:
+            break
         }
     }
     
